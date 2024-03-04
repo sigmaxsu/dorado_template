@@ -6,3 +6,8 @@ Barcoding kit name,EXP-NBD114,,"NanoPore barcode kit name: EXP-NBD104, EXP-NBD11
 Basecalling model,dna_r9.4.1_e8_sup@v3.3,/home/DATA_NAS/JiaYang/software/dorado/0.5.0/dorado-0.5.0-linux-x64/model/,super precision model,2024/1/3,basecaller
 Data type,pod5,../pod5,data type,2024/1/3,basecaller
 Output dir,demux,../,splitted file folder,2024/1/3,demux
+-----model list-----,,,,,
+High_3.3,dna_r9.4.1_e8_hac@v3.3,/home/DATA_NAS/JiaYang/software/dorado/0.5.0/dorado-0.5.0-linux-x64/model/,"High Accuracy basecalling (HAC): highly accurate, intermediate speed and computational requirement. Good compatibility with real-time basecalling device?",2024/1/29,basecaller
+Super_3.3,dna_r9.4.1_e8_sup@v3.3,/home/DATA_NAS/JiaYang/software/dorado/0.5.0/dorado-0.5.0-linux-x64/model/,"Super accuracy basecalling (SUP): the most accurate, more computationally intense?",2024/1/29,basecaller
+Fast_3.4,dna_r9.4.1_e8_fast@v3.4,/home/DATA_NAS/JiaYang/software/dorado/0.5.0/dorado-0.5.0-linux-x64/model/,"Fast basecalling: fastest, least computationally intense, highest compatibility with real-time basecalling on device?",2024/1/29,basecaller
+Super_3.6,dna_r9.4.1_e8_sup@v3.6,/home/DATA_NAS/JiaYang/software/dorado/0.5.0/dorado-0.5.0-linux-x64/model/,"Super accuracy basecalling (SUP): the most accurate, more computationally intense?",2023/12/18,basecaller

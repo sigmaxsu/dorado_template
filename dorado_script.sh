@@ -67,7 +67,7 @@ echo "$cmd $basecall $device $cuda $kitname $BCKit $trim $primer $modelpath $pod
 echo "
      Basecalling..."
 #command 1
-$cmd $basecall $device $cuda $kitname $BCKit $trim $primer $modelpath $pod5folder > ../$Outputfile
+#$cmd $basecall $device $cuda $kitname $BCKit $trim $primer $modelpath $pod5folder > ../$Outputfile
 
 # dorado dmux
 
@@ -91,4 +91,4 @@ outputdir="../"$Date"_"$Outputfile"_demux"
 output=--output-dir
 #command 2
 echo "$cmd demux $output $outputdir $kitname $BCKit ../$Outputfile"
-$cmd demux $output $outputdir $kitname $BCKit ../$Outputfile
+#$cmd demux $output $outputdir $kitname $BCKit ../$Outputfile
