@@ -33,7 +33,12 @@ cuda=$(grep "Device" settings.csv | cut -f 2 -d ",")
 #device=""
 echo "device: "$device $cuda
 
-modelpath=$(grep "Basecalling model" settings.csv | cut -f 3 -d ",")$(grep "Basecalling model" settings.csv | cut -f 2 -d ",")
+modelname=$(grep "Basecalling model" settings.csv | cut -f 2 -d ",")
+echo "Model name: "$modelname
+
+modelselect=$(tail -n +$(cut -f 1 -d "," settings.csv |grep -n $modelname | cut -f 1 -d ":") settings.csv | head -n 1)
+
+modelpath=$(echo $modelselect | cut -f 3 -d ",")$(echo $modelselect | cut -f 2 -d ",")
 echo "Model path: "$modelpath
 
 pod5folder=$(grep "Data type" settings.csv | cut -f 3 -d ",")
