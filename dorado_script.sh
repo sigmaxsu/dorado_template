@@ -46,7 +46,7 @@ echo "The data type is "$(grep "Data type" settings.csv | cut -f 2 -d ",")"
      path: "$pod5folder
 
 Date=$(date -I)
-Outputfile=$Date"_dorado_basecalling.bam"
+Outputfile=$Date"_"$modelname"_dorado_basecalling.bam"
 echo "Output file name: "$Outputfile
 
 if [[ $(grep "Barcoding or not" settings.csv | cut -f 2 -d ",") == "Yes" ]] ; then
@@ -72,7 +72,8 @@ echo "$cmd $basecall $device $cuda $kitname $BCKit $trim $primer $modelpath $pod
 echo "
      Basecalling..."
 #command 1
-$cmd $basecall $device $cuda $kitname $BCKit $trim $primer $modelpath $pod5folder > ../$Outputfile
+mkdir results
+$cmd $basecall $device $cuda $kitname $BCKit $trim $primer $modelpath $pod5folder > ./results/$Outputfile
 
 # dorado dmux
 
@@ -95,5 +96,5 @@ Date=$(date -I)
 outputdir="../"$Date"_"$Outputfile"_demux"
 output=--output-dir
 #command 2
-echo "$cmd demux $output $outputdir $kitname $BCKit ../$Outputfile"
+echo "$cmd demux $output $outputdir $kitname $BCKit ./results/$Outputfile"
 $cmd demux $output $outputdir $kitname $BCKit ../$Outputfile
